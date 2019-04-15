@@ -8,11 +8,11 @@ int angle[5];
 void setup()  
 {
   Serial.begin(9600);
-  fingers[0].attach(5);
-  fingers[1].attach(6);
-  fingers[2].attach(7);
-  fingers[3].attach(B0);
-  fingers[4].attach(B1);
+  fingers[0].attach(3);
+  fingers[1].attach(5);
+  fingers[2].attach(6);
+  fingers[3].attach(9);
+  fingers[4].attach(10);
  }
 int counter=1;
 
@@ -39,7 +39,7 @@ void loop()
    flexposition[i] = flex_now[i]-flex_pred[i];
    delay(1000);
    Serial.println(flexposition[i]);
-   if(flexposition[i]>=3 )
+   if(flexposition[i]>=10 )
    {
       //   Serial.println(i);
         angle[i]=0;
@@ -48,7 +48,7 @@ void loop()
         fingers[i].write(angle[i]);
      
    } 
-  if (flexposition[i]<=-3)
+  if (flexposition[i]<=-10)
    {
      Serial.print("angel");
      Serial.println(angle[i]);
