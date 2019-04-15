@@ -41,7 +41,7 @@ void loop()
    Serial.println(flexposition[i]);
    if(flexposition[i]>=10 )
    {
-      //   Serial.println(i);
+      
         angle[i]=0;
         Serial.print("angel");
         Serial.println(angle[i]);
@@ -55,7 +55,7 @@ void loop()
      angle[i]=90;
      fingers[i].write(angle[i]);
      
-      //  Serial.println(flexposition[2]);  
+        
     
     
     }
